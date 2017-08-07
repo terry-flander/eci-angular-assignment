@@ -1,0 +1,52 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<md-card class="calculator-keyboard">
+  <div class="buttons">
+    <div class="row">
+      <input [(ngModel)]="registers.displayField" class="display-field" type="text" value="0" maxlength="9" />
+    </div>
+    <div class="row">
+      <button (click)="clearPress('Clear')" md-raised-button class="button-square background-accent-color white-text">AC</button>
+      <button (click)="functionPress('Root')" md-raised-button class="button-square background-accent-color white-text">&radic;</button>
+      <button (click)="functionPress('Power')" md-raised-button class="button-square background-accent-color white-text">x<span class="sup">n</span></button>
+      <button (click)="functionPress('Divide')" md-raised-button class="button-square background-accent-color white-text">&divide;</button>
+    </div>
+    <div class="row">
+      <button (click)="digitPress('7')" md-raised-button class="button-square background-primary-color white-text">7</button>
+      <button (click)="digitPress('8')" md-raised-button class="button-square background-primary-color white-text">8</button>
+      <button (click)="digitPress('9')" md-raised-button class="button-square background-primary-color white-text">9</button>
+      <button (click)="functionPress('Multiply')" md-raised-button class="button-square background-accent-color white-text">&times;</button>
+    </div>
+    <div class="row">
+      <button (click)="digitPress('4')" md-raised-button class="button-square background-primary-color white-text">4</button>
+      <button (click)="digitPress('5')" md-raised-button class="button-square background-primary-color white-text">5</button>
+      <button (click)="digitPress('6')" md-raised-button class="button-square background-primary-color white-text">6</button>
+      <button (click)="functionPress('Subtract')" md-raised-button class="button-square background-accent-color white-text">&minus;</button>
+    </div>
+    <div class="row">
+      <button (click)="digitPress('1')" md-raised-button class="button-square background-primary-color white-text">1</button>
+      <button (click)="digitPress('2')" md-raised-button class="button-square background-primary-color white-text">2</button>
+      <button (click)="digitPress('3')" md-raised-button class="button-square background-primary-color white-text">3</button>
+      <button (click)="functionPress('Add')" md-raised-button class="button-square background-accent-color white-text">+</button>
+    </div>
+    <div class="row">
+      <button (click)="digitPress('0')" md-raised-button class="button-wide background-primary-color white-text">0</button>
+      <button (click)="digitPress('.')" md-raised-button class="button-square background-primary-color white-text">.</button>
+      <button (click)="functionPress('Equals')" md-raised-button class="button-square background-accent-color white-text">=</button>
+    </div>
+  </div>
+</md-card>
+
+<md-checkbox [ngModel]="showHide" (ngModelChange)="toggleShowHide()">Show Calculator Registers</md-checkbox>
+<div *ngIf="showHide">
+  <md-card class="register-card">
+  <table>
+    <tr><td class="register-name">Display:</td><td class="register-data">{{registers.displayField}}</td><tr>
+    <tr><td class="register-name">Digits:</td><td class="register-data">{{registers.digitsEntered}}</td><tr>
+    <tr><td class="register-name">Pending Function:</td><td class="register-data">{{registers.pendingFunction}}</td><tr>
+    <tr><td class="register-name">LastTotal:</td><td class="register-data">{{registers.lastTotal}}</td><tr>
+    <tr><td class="register-name">LastX:</td><td class="register-data">{{registers.lastX}}</td><tr> 
+    <tr><td class="register-name">LastFunction:</td><td class="register-data">{{registers.lastFunction}}</td><tr>
+  </table>
+  </md-card>
+</div>

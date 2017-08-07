@@ -1,0 +1,68 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.primary-color {
+    color: #3F51B5!important;
+}
+
+.accent-color {
+    color: #FF4081!important;
+}
+
+.background-primary-color {
+    background-color: #3F51B5!important;
+}
+
+.background-accent-color {
+    background-color: #FF4081!important;
+}
+
+.white-text {
+    color: #FFF!important;
+}
+
+.button-square {
+    margin: 2px;
+    width: 96px;
+    font-size: 14pt;
+}
+
+.button-wide {
+    margin: 2px;
+    width: 200px;
+    font-size: 14pt;
+}
+
+.display-field {
+    text-align: right;
+    font-size: 20pt;
+    width: 404px;
+}
+
+.calculator-keyboard {
+    width: 430px;
+    background-color: lightblue;
+}
+
+.register-card {
+    width: 400px;
+    background-color: lightyellow;
+}
+
+.sup {
+  position: relative;
+  bottom: 1ex; 
+  font-size: 80%;
+}
+
+.register-name {
+  width: 150px;
+  text-align: right;
+}
+
+.register-data {
+  width: 200px;
+  text-align: right;
+  border: 1px black solid;
+}

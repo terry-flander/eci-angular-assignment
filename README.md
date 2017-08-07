@@ -1,28 +1,31 @@
-# EciAngularAssignment
+# eci-angular-assignment
+The application Calculator is designed to provide an extendable a browser-based arithmetic calculator.
+ 
+This design implements a fully functional representation of a calculator keyboard. It provides the ability to string together operands, each of which acts on the previous result as shown in the display.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
+Tests are implemented with both direct calculations, i.e. 1 + 1 = 2, as well as simulating keyboard entry. There is also a separation of binary calculations requiring two Operands (+, -, *, /, x^y) and unary calculations requiring only one Operand (square root).  
 
-## Development server
+### Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. Clone or Download from GitHub
+2. Unpack in `<work-directory>`
+3. `cd to <work-directory>/eci-angular-assignment
+4. `ng build`
 
-## Code scaffolding
+This will download all required libraries and build the web application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+### Run
 
-## Build
+To run the web app, start a server with:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+`ng serve`
 
-## Running unit tests
+You will then be able to access the Calculator at:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`http://localhost:4200`
 
-## Running end-to-end tests
+### Test
+ 
+ To run the Karma tests included, execute:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+`ng test`
