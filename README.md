@@ -10,7 +10,8 @@ Tests are implemented with both direct calculations, i.e. 1 + 1 = 2, as well as 
 1. Clone or Download from GitHub
 2. Unpack in `<work-directory>`
 3. `cd to <work-directory>/eci-angular-assignment
-4. `ng build`
+4. `npm install`
+5. `ng build`
 
 This will download all required libraries and build the web application.
 
@@ -23,6 +24,8 @@ To run the web app, start a server with:
 You will then be able to access the Calculator at:
 
 `http://localhost:4200`
+
+Then click on the "Calculator" button to see the Keypad
 
 ### Test
  
