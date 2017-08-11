@@ -37,7 +37,7 @@
   </div>
 </md-card>
 
-<md-checkbox [ngModel]="showHide" (ngModelChange)="toggleShowHide()">Show Calculator Registers</md-checkbox>
+<md-checkbox ng-model="showHide" (change)="toggleShowHide()">Show Calculator Registers</md-checkbox>
 <div *ngIf="showHide">
   <md-card class="register-card">
   <table>

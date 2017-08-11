@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+// import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { RouterModule, Routes } from '@angular/router';
+import { MaterialModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { CalculatorComponent } from './Calculator/calculator.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '@angular/material';
-import { RouterModule, Routes } from '@angular/router';
 import { routes } from './app.routes';
 
 @NgModule({
@@ -19,7 +18,7 @@ import { routes } from './app.routes';
     BrowserModule,
     FormsModule,
     HttpModule,
-    [NoopAnimationsModule],
+   // [NoopAnimationsModule],
     MaterialModule,
     RouterModule.forRoot(routes),
   ],

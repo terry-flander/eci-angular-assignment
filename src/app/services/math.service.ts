@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class MathService {
   functionList = 'Add,Subtract,Multiply,Divide,Power,Root';
 
-  calculateEquals(operand1, operator, operand2) {
+  calculateEquals(operand1: any, operator: string, operand2: any) {
     var result = 0;
     var errorMsg = '';
     try {
@@ -40,7 +40,7 @@ export class MathService {
     return result;
   }
 
-  addError(errorMsg, errorToAdd) {
+  addError(errorMsg: string, errorToAdd: string) {
     var result = errorMsg;
     if (result==undefined) {
       result = '';

@@ -19,7 +19,7 @@ export class CalculatorComponent {
     this.clearRegisters();
   }
 
-  digitPress(event) {
+  digitPress(event: string) {
     if (this.registers==undefined) {
       this.clearRegisters();
     } 
@@ -32,7 +32,7 @@ export class CalculatorComponent {
     }
   }
 
-  clearPress(event) {
+  clearPress(event: string) {
     // Clear Display first time
     if (this.registers.digitsEntered!=0) {
       this.registers.digitsEntered = 0;
@@ -69,7 +69,7 @@ export class CalculatorComponent {
     this.showHide = !this.showHide;
   }
 
-  functionPress(event) {
+  functionPress(event: string) {
     if (this.unaryFunctions.indexOf(event)!=-1) {
       this.registers.displayField = this.mathService.calculateEquals(+this.registers.displayField, event, 0) + '';
     }
@@ -85,7 +85,7 @@ export class CalculatorComponent {
     }
   }
 
-  calculateEquals(event) {
+  calculateEquals(event: string) {
     if (event!='Equals' || this.registers.pendingFunction!='') { 
       this.registers.lastX = +this.registers.displayField;
     } 
@@ -99,7 +99,7 @@ export class CalculatorComponent {
     this.registers.pendingFunction = '';
   }
 
-  allowDigit(event) {
+  allowDigit(event: string) {
     var result = true;
     if (this.registers.digitsEntered >= 12) {
       result = false;

@@ -8,7 +8,9 @@
     "types": [
       "jasmine",
       "node"
-    ]
+    ],
+    "experimentalDecorators": true,
+    "lib": ["es2015", "es2017", "dom"]
   },
   "files": [
     "test.ts"
